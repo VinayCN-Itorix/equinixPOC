@@ -38,118 +38,118 @@ public ResponseEntity<Map<String, Object>> getTicketById(@PathVariable String id
                                                          @RequestHeader(value = "deviate", required = false) boolean deviate,
                                                          @RequestHeader(value = "enableTracing",required = false) boolean enableTracing) throws URISyntaxException {
     Map<String, Object> data = Map.ofEntries(
-            Map.entry("category", "<string>"),
-            Map.entry("subCategory", "<string>"),
-            Map.entry("description", "<string>"),
-            Map.entry("primaryId", "<string>"),
-            Map.entry("occurredDateTime", "<dateTime>"),
-            Map.entry("id", "<string>"),
-            Map.entry("secondaryId", "<string>"),
-            Map.entry("customerReferenceId", "<string>"),
-            Map.entry("resolutionDateTime", "<dateTime>"),
+            Map.entry("category", "Technical Issue"),
+            Map.entry("subCategory", "Network"),
+            Map.entry("description", "Network outage affecting multiple users."),
+            Map.entry("primaryId", "PRI12345"),
+            Map.entry("occurredDateTime", "2024-08-30T14:00:00Z"),
+            Map.entry("id", "ISSUE67890"),
+            Map.entry("secondaryId", "SEC09876"),
+            Map.entry("customerReferenceId", "CUST54321"),
+            Map.entry("resolutionDateTime", "2024-08-30T16:00:00Z"),
             Map.entry("status", "CLOSED"),
             Map.entry("resolutions", List.of(
                     Map.ofEntries(
-                            Map.entry("id", "<string>"),
-                            Map.entry("type", "<string>"),
-                            Map.entry("status", "<string>"),
-                            Map.entry("description", "<string>"),
-                            Map.entry("price", "<string>"),
-                            Map.entry("hours", "<string>")
+                            Map.entry("id", "RES001"),
+                            Map.entry("type", "Fix"),
+                            Map.entry("status", "Completed"),
+                            Map.entry("description", "Replaced faulty network switch."),
+                            Map.entry("price", "$500"),
+                            Map.entry("hours", "2")
                     ),
                     Map.ofEntries(
-                            Map.entry("id", "<string>"),
-                            Map.entry("type", "<string>"),
-                            Map.entry("status", "<string>"),
-                            Map.entry("description", "<string>"),
-                            Map.entry("price", "<string>"),
-                            Map.entry("hours", "<string>")
+                            Map.entry("id", "RES002"),
+                            Map.entry("type", "Diagnosis"),
+                            Map.entry("status", "Completed"),
+                            Map.entry("description", "Diagnosed network configuration issue."),
+                            Map.entry("price", "$300"),
+                            Map.entry("hours", "1.5")
                     )
             )),
             Map.entry("details", Map.ofEntries(
-                    Map.entry("callFromCage", false),
+                    Map.entry("callFromCage", true),
                     Map.entry("availability", "ANYTIME"),
                     Map.entry("timezone", "America/Puerto_Rico"),
                     Map.entry("submarineEngineerRequired", false)
             )),
             Map.entry("notes", List.of(
                     Map.ofEntries(
-                            Map.entry("id", "<string>"),
-                            Map.entry("createdDateTime", "<dateTime>"),
-                            Map.entry("text", "<string>"),
-                            Map.entry("author", "<string>"),
-                            Map.entry("referenceId", "<string>"),
+                            Map.entry("id", "NOTE001"),
+                            Map.entry("createdDateTime", "2024-08-30T15:00:00Z"),
+                            Map.entry("text", "Initial report received from customer."),
+                            Map.entry("author", "Alice Johnson"),
+                            Map.entry("referenceId", "REF001"),
                             Map.entry("type", "CUSTOMER_QUERY"),
                             Map.entry("attachments", List.of(
                                     Map.ofEntries(
-                                            Map.entry("id", "<string>"),
-                                            Map.entry("name", "<string>")
+                                            Map.entry("id", "ATT001"),
+                                            Map.entry("name", "NetworkDiagram.png")
                                     ),
                                     Map.ofEntries(
-                                            Map.entry("id", "<string>"),
-                                            Map.entry("name", "<string>")
+                                            Map.entry("id", "ATT002"),
+                                            Map.entry("name", "LogFile.txt")
                                     )
                             ))
                     ),
                     Map.ofEntries(
-                            Map.entry("id", "<string>"),
-                            Map.entry("createdDateTime", "<dateTime>"),
-                            Map.entry("text", "<string>"),
-                            Map.entry("author", "<string>"),
-                            Map.entry("referenceId", "<string>"),
+                            Map.entry("id", "NOTE002"),
+                            Map.entry("createdDateTime", "2024-08-30T15:30:00Z"),
+                            Map.entry("text", "Technician update on issue resolution."),
+                            Map.entry("author", "Bob Smith"),
+                            Map.entry("referenceId", "REF002"),
                             Map.entry("type", "TECHNICIAN_QUERY"),
                             Map.entry("attachments", List.of(
                                     Map.ofEntries(
-                                            Map.entry("id", "<string>"),
-                                            Map.entry("name", "<string>")
+                                            Map.entry("id", "ATT003"),
+                                            Map.entry("name", "ResolutionSteps.docx")
                                     ),
                                     Map.ofEntries(
-                                            Map.entry("id", "<string>"),
-                                            Map.entry("name", "<string>")
+                                            Map.entry("id", "ATT004"),
+                                            Map.entry("name", "Invoice.pdf")
                                     )
                             ))
                     )
             )),
             Map.entry("attachments", List.of(
                     Map.ofEntries(
-                            Map.entry("id", "<string>"),
-                            Map.entry("name", "<string>")
+                            Map.entry("id", "ATT005"),
+                            Map.entry("name", "DetailedReport.pdf")
                     ),
                     Map.ofEntries(
-                            Map.entry("id", "<string>"),
-                            Map.entry("name", "<string>")
+                            Map.entry("id", "ATT006"),
+                            Map.entry("name", "ClientFeedback.xlsx")
                     )
             )),
             Map.entry("contacts", List.of(
                     Map.ofEntries(
-                            Map.entry("registeredUser", "<string>"),
-                            Map.entry("firstName", "<string>"),
-                            Map.entry("lastName", "<string>"),
+                            Map.entry("registeredUser", "user123"),
+                            Map.entry("firstName", "John"),
+                            Map.entry("lastName", "Doe"),
                             Map.entry("type", "ORDERING"),
                             Map.entry("details", List.of(
                                     Map.ofEntries(
                                             Map.entry("type", "EMAIL"),
-                                            Map.entry("value", "<string>")
+                                            Map.entry("value", "john.doe@example.com")
                                     ),
                                     Map.ofEntries(
-                                            Map.entry("type", "EMAIL"),
-                                            Map.entry("value", "<string>")
+                                            Map.entry("type", "PHONE"),
+                                            Map.entry("value", "+1122334455")
                                     )
                             ))
                     ),
                     Map.ofEntries(
-                            Map.entry("registeredUser", "<string>"),
-                            Map.entry("firstName", "<string>"),
-                            Map.entry("lastName", "<string>"),
+                            Map.entry("registeredUser", "tech456"),
+                            Map.entry("firstName", "Jane"),
+                            Map.entry("lastName", "Smith"),
                             Map.entry("type", "TECHNICAL"),
                             Map.entry("details", List.of(
                                     Map.ofEntries(
-                                            Map.entry("type", "PHONE"),
-                                            Map.entry("value", "<string>")
+                                            Map.entry("type", "EMAIL"),
+                                            Map.entry("value", "jane.smith@tech.com")
                                     ),
                                     Map.ofEntries(
                                             Map.entry("type", "PHONE"),
-                                            Map.entry("value", "<string>")
+                                            Map.entry("value", "+9988776655")
                                     )
                             ))
                     )
@@ -215,11 +215,11 @@ public ResponseEntity<Map<String, Object>> createATicket(Map<String , Object> ma
         dataMap.put("customerReferenceId", "<string>");
         dataMap.put("purchaseOrder", Map.of(
                 "type", "NEW",
-                "number", "<string>",
-                "amount", "<number>",
-                "startDate", "<date>",
-                "endDate", "<date>",
-                "attachmentId", "<string>"
+                "number", "234567890",
+                "amount", "698990",
+                "startDate", "12-09-24",
+                "endDate", "12-10-24",
+                "attachmentId", "987654356789"
         ));
         dataMap.put("attachments", List.of(
                 Map.of("id", "<string>", "name", "<string>"),
